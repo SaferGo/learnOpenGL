@@ -14,8 +14,6 @@ include_directories(~/usr/local/include)
 
 link_directories(~/usr/local/lib)
 
-set(EXECUTABLE_OUTPUT_PATH ${OUTPUT_DIRECTORY})
-
 add_executable(${PROJECT_NAME} ${SRC_DIRECTORY}/main.cpp ${SRC_DIRECTORY}/glad.c)
 
 target_link_libraries(${PROJECT_NAME} glfw3 GL X11 pthread Xrandr Xi dl)
