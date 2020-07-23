@@ -18,3 +18,4 @@ add_executable(${PROJECT_NAME} ${SRC_DIRECTORY}/main.cpp ${SRC_DIRECTORY}/glad.c
 
 target_link_libraries(${PROJECT_NAME} glfw3 GL X11 pthread Xrandr Xi dl)
 
+set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${OUTPUT_DIRECTORY}")
