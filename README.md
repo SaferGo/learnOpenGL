@@ -1,6 +1,6 @@
-#Solved tasks from learnopengl.com
+<h1>Solved tasks from learnopengl.com</h1>
 <md-divider></md-divider>
-Build each task with:
+<br>Build each task with:
 <ul>
   <li>$ mkdir build</li>
   <li>$ cd build/</li>
