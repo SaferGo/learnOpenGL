@@ -1,3 +1,0 @@
-/home/sfg/Graphics/projects/LearnOpenGL/Shaders/Uniforms/build/CMakeFiles/rebuild_cache.dir
-/home/sfg/Graphics/projects/LearnOpenGL/Shaders/Uniforms/build/CMakeFiles/edit_cache.dir
-/home/sfg/Graphics/projects/LearnOpenGL/Shaders/Uniforms/build/CMakeFiles/Uniforms.dir
