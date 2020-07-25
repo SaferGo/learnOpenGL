@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/UCvertices.dir/src/main.cpp.o CMakeFiles/UCvertices.dir/src/glad.c.o  -o ../UCvertices   -L/home/sfg/usr/local/lib  -Wl,-rpath,/home/sfg/usr/local/lib -lglfw3 -lGL -lX11 -lpthread -lXrandr -lXi -ldl 
