@@ -7,5 +7,5 @@
   <li>$ cmake ..</li>
   <li>$ make</li>
 </ul>
-<br>#Each task is independient, so you can copy the folder anywhere and build italone.
+<br>#Each task is independient, so you can copy the folder anywhere and build it alone.
 <br>#The ycm.py file is for use the GoTo commands from YouCompleteMe.
