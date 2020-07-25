@@ -1,3 +1,0 @@
-/home/sfg/Graphics/projects/LearnOpenGL/Shaders/UpdateColorVertices/build/CMakeFiles/rebuild_cache.dir
-/home/sfg/Graphics/projects/LearnOpenGL/Shaders/UpdateColorVertices/build/CMakeFiles/edit_cache.dir
-/home/sfg/Graphics/projects/LearnOpenGL/Shaders/UpdateColorVertices/build/CMakeFiles/UColorV.dir

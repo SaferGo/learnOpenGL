@@ -1,11 +1,11 @@
 # Solved tasks from learnopengl.com
 <md-divider></md-divider>
-Build each task with::
+Build each task with:
 <ul>
-  <li>Create a "build" folder.</li>
-  <li>Executes "$ cmake .." there</li>
-  <li>Then executes $ make there.</li>
-  <li>Finally you'll find the executable in the bin/ folder.</li>
+  <li>$ mkdir build</li>
+  <li>$ cd build/</li>
+  <li>$ cmake ..</li>
+  <li>$ make</li>
 </ul>
+#Each task is independient, so you can copy the folder anywhere and build italone.
 #The ycm.py file is for use the GoTo commands from YouCompleteMe.
-
