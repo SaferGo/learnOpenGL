@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/Uniforms.dir/src/main.cpp.o CMakeFiles/Uniforms.dir/src/glad.c.o  -o ../Uniforms   -L/home/sfg/usr/local/lib  -Wl,-rpath,/home/sfg/usr/local/lib -lglfw3 -lGL -lX11 -lpthread -lXrandr -lXi -ldl 
+/usr/bin/c++    -rdynamic CMakeFiles/Uniforms.dir/src/glad.c.o CMakeFiles/Uniforms.dir/src/main.cpp.o  -o ../bin/Uniforms   -L/home/sfg/usr/local/lib  -Wl,-rpath,/home/sfg/usr/local/lib -lglfw3 -lGL -lX11 -lpthread -lXrandr -lXi -ldl 

@@ -77,22 +77,9 @@ include CMakeFiles/Uniforms.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Uniforms.dir/flags.make
 
-CMakeFiles/Uniforms.dir/src/main.cpp.o: CMakeFiles/Uniforms.dir/flags.make
-CMakeFiles/Uniforms.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sfg/Graphics/projects/LearnOpenGL/Shaders/Uniforms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Uniforms.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Uniforms.dir/src/main.cpp.o -c /home/sfg/Graphics/projects/LearnOpenGL/Shaders/Uniforms/src/main.cpp
-
-CMakeFiles/Uniforms.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Uniforms.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sfg/Graphics/projects/LearnOpenGL/Shaders/Uniforms/src/main.cpp > CMakeFiles/Uniforms.dir/src/main.cpp.i
-
-CMakeFiles/Uniforms.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Uniforms.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sfg/Graphics/projects/LearnOpenGL/Shaders/Uniforms/src/main.cpp -o CMakeFiles/Uniforms.dir/src/main.cpp.s
-
 CMakeFiles/Uniforms.dir/src/glad.c.o: CMakeFiles/Uniforms.dir/flags.make
 CMakeFiles/Uniforms.dir/src/glad.c.o: ../src/glad.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sfg/Graphics/projects/LearnOpenGL/Shaders/Uniforms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Uniforms.dir/src/glad.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sfg/Graphics/projects/LearnOpenGL/Shaders/Uniforms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Uniforms.dir/src/glad.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Uniforms.dir/src/glad.c.o   -c /home/sfg/Graphics/projects/LearnOpenGL/Shaders/Uniforms/src/glad.c
 
 CMakeFiles/Uniforms.dir/src/glad.c.i: cmake_force
@@ -103,23 +90,36 @@ CMakeFiles/Uniforms.dir/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Uniforms.dir/src/glad.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sfg/Graphics/projects/LearnOpenGL/Shaders/Uniforms/src/glad.c -o CMakeFiles/Uniforms.dir/src/glad.c.s
 
+CMakeFiles/Uniforms.dir/src/main.cpp.o: CMakeFiles/Uniforms.dir/flags.make
+CMakeFiles/Uniforms.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sfg/Graphics/projects/LearnOpenGL/Shaders/Uniforms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Uniforms.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Uniforms.dir/src/main.cpp.o -c /home/sfg/Graphics/projects/LearnOpenGL/Shaders/Uniforms/src/main.cpp
+
+CMakeFiles/Uniforms.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Uniforms.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sfg/Graphics/projects/LearnOpenGL/Shaders/Uniforms/src/main.cpp > CMakeFiles/Uniforms.dir/src/main.cpp.i
+
+CMakeFiles/Uniforms.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Uniforms.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sfg/Graphics/projects/LearnOpenGL/Shaders/Uniforms/src/main.cpp -o CMakeFiles/Uniforms.dir/src/main.cpp.s
+
 # Object files for target Uniforms
 Uniforms_OBJECTS = \
-"CMakeFiles/Uniforms.dir/src/main.cpp.o" \
-"CMakeFiles/Uniforms.dir/src/glad.c.o"
+"CMakeFiles/Uniforms.dir/src/glad.c.o" \
+"CMakeFiles/Uniforms.dir/src/main.cpp.o"
 
 # External object files for target Uniforms
 Uniforms_EXTERNAL_OBJECTS =
 
-../Uniforms: CMakeFiles/Uniforms.dir/src/main.cpp.o
-../Uniforms: CMakeFiles/Uniforms.dir/src/glad.c.o
-../Uniforms: CMakeFiles/Uniforms.dir/build.make
-../Uniforms: CMakeFiles/Uniforms.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sfg/Graphics/projects/LearnOpenGL/Shaders/Uniforms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../Uniforms"
+../bin/Uniforms: CMakeFiles/Uniforms.dir/src/glad.c.o
+../bin/Uniforms: CMakeFiles/Uniforms.dir/src/main.cpp.o
+../bin/Uniforms: CMakeFiles/Uniforms.dir/build.make
+../bin/Uniforms: CMakeFiles/Uniforms.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sfg/Graphics/projects/LearnOpenGL/Shaders/Uniforms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../bin/Uniforms"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Uniforms.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Uniforms.dir/build: ../Uniforms
+CMakeFiles/Uniforms.dir/build: ../bin/Uniforms
 
 .PHONY : CMakeFiles/Uniforms.dir/build
 

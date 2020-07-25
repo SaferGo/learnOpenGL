@@ -131,17 +131,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named UCvertices
+# Target rules for targets named UColorV
 
 # Build rule for target.
-UCvertices: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 UCvertices
-.PHONY : UCvertices
+UColorV: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 UColorV
+.PHONY : UColorV
 
 # fast build rule for target.
-UCvertices/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UCvertices.dir/build.make CMakeFiles/UCvertices.dir/build
-.PHONY : UCvertices/fast
+UColorV/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UColorV.dir/build.make CMakeFiles/UColorV.dir/build
+.PHONY : UColorV/fast
 
 src/glad.o: src/glad.c.o
 
@@ -149,7 +149,7 @@ src/glad.o: src/glad.c.o
 
 # target to build an object file
 src/glad.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UCvertices.dir/build.make CMakeFiles/UCvertices.dir/src/glad.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UColorV.dir/build.make CMakeFiles/UColorV.dir/src/glad.c.o
 .PHONY : src/glad.c.o
 
 src/glad.i: src/glad.c.i
@@ -158,7 +158,7 @@ src/glad.i: src/glad.c.i
 
 # target to preprocess a source file
 src/glad.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UCvertices.dir/build.make CMakeFiles/UCvertices.dir/src/glad.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UColorV.dir/build.make CMakeFiles/UColorV.dir/src/glad.c.i
 .PHONY : src/glad.c.i
 
 src/glad.s: src/glad.c.s
@@ -167,7 +167,7 @@ src/glad.s: src/glad.c.s
 
 # target to generate assembly for a file
 src/glad.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UCvertices.dir/build.make CMakeFiles/UCvertices.dir/src/glad.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UColorV.dir/build.make CMakeFiles/UColorV.dir/src/glad.c.s
 .PHONY : src/glad.c.s
 
 src/main.o: src/main.cpp.o
@@ -176,7 +176,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UCvertices.dir/build.make CMakeFiles/UCvertices.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UColorV.dir/build.make CMakeFiles/UColorV.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -185,7 +185,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UCvertices.dir/build.make CMakeFiles/UCvertices.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UColorV.dir/build.make CMakeFiles/UColorV.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -194,7 +194,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UCvertices.dir/build.make CMakeFiles/UCvertices.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UColorV.dir/build.make CMakeFiles/UColorV.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -205,7 +205,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... UCvertices"
+	@echo "... UColorV"
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"

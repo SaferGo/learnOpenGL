@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.11)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(PROJECT_NAME Triangle)
+set(PROJECT_NAME ShaderClass)
 
 set(SRC_DIR src/)
 

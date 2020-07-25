@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../Uniforms"
-  "../Uniforms.pdb"
+  "../bin/Uniforms"
+  "../bin/Uniforms.pdb"
   "CMakeFiles/Uniforms.dir/src/glad.c.o"
   "CMakeFiles/Uniforms.dir/src/main.cpp.o"
 )
