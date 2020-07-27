@@ -10,7 +10,8 @@ set(BIN_DIR ../bin/)
 
 project(${PROJECT_NAME})
 
-file(GLOB SRC_FILES ${SRC_DIR}/*.cpp ${SRC_DIR}/*.h ${SRC_DIR}/*.c)
+file(GLOB SRC_FILES ${SRC_DIR}/*.cpp ${SRC_DIR}/*.c)
+#the header files are linked with the cpp files
 
 include_directories(~/usr/local/include)
 
