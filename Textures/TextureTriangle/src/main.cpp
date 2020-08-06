@@ -1,5 +1,5 @@
 /*
- * Task: Create a class that loads shaders.
+ * Task: Create a triangle and apply a texture to it.
  * Author: Santiago Fernando Gomez
 */
 
@@ -9,6 +9,9 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include "shader.h"
+
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb_image.h"
 
 void framebuffer_size_callback(GLFWwindow *window, int width, int height) {
     glViewport(0, 0, width, height);
@@ -47,9 +50,10 @@ int main() {
     }    
       
     float vertices[] = {
-        0.5f, -0.3f, 0.0f,
-        -0.5f, -0.3f, 0.0f,
-        0.0f, 0.8f, 0.0f,
+       //positions         //texture coords
+        0.5f, -0.3f, 0.0f, 0.0f, 0.0f,
+       -0.5f, -0.3f, 0.0f, 1.0f, 0.0f,
+        0.0f,  0.8f, 0.0f, 0.5f, 1.0f,
     };
     
     unsigned int indices[] = {0, 1, 2};
@@ -69,10 +73,36 @@ int main() {
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*) (3 * sizeof(float)));
+    glEnableVertexAttribArray(1);
+    
 
-    Shader ourShader("../shaders/shader.vs", "../shaders/shader.fs");
+    Shader ourShader("../src/shaders/shader.vs", "../src/shaders/shader.fs");
+
+    //Load textures
+    int width_t, height_t, nrChannels;
+    unsigned char *data = stbi_load("../src/textures/wall.jpg", &width_t, &height_t, &nrChannels, 0);
+    if (!data) {
+    	std::cout << "Failed to load texture" << std::endl;
+    }
+    //Generate obj for texture
+    unsigned int texture;
+    glGenTextures(1, &texture);
+    glBindTexture(GL_TEXTURE_2D, texture);
+    //Set the texture wrapping and filtering options
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    //Generate textures/Mipmap
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width_t, height_t, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+    glGenerateMipmap(GL_TEXTURE_2D);
+
+    //After generating the texture we fee the image memory
+    stbi_image_free(data);
 
     while (!glfwWindowShouldClose(window)) {
         process_input(window);
@@ -82,16 +112,9 @@ int main() {
         
 	ourShader.use();
 	
-	float timeValue = glfwGetTime();
-	float colorValues[4];
-	colorValues[0] = sin(timeValue) / 2.0f + 0.5f;
-	colorValues[1] = sin(timeValue) / 2.0f + 0.3f;
-	colorValues[2] = cos(timeValue) / 2.0f + 0.7;
-	colorValues[3] = 1.0f;
-	ourShader.set4Float("ourColor", colorValues);
-        
+	glBindTexture(GL_TEXTURE_2D, texture);
 	glBindVertexArray(VAO);
-        glDrawElements(GL_TRIANGLES, sizeof(vertices), GL_UNSIGNED_INT, 0);
+        glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0);
         
 	glfwSwapBuffers(window);
         glfwPollEvents();

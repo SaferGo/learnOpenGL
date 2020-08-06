@@ -1,5 +1,5 @@
 /*
- * Task: Create a class that loads shaders.
+ * Task: Specify a horizontal offset via a uniform and move the triangle to the right side of the screen in the vertex shader using this offset value.
  * Author: Santiago Fernando Gomez
 */
 
@@ -73,6 +73,7 @@ int main() {
     glEnableVertexAttribArray(0);
 
     Shader ourShader("../shaders/shader.vs", "../shaders/shader.fs");
+    int pos_uniform = glGetUniformLocation(ourShader.id, "myPos");
 
     while (!glfwWindowShouldClose(window)) {
         process_input(window);
@@ -81,7 +82,10 @@ int main() {
         glClear(GL_COLOR_BUFFER_BIT);
         
 	ourShader.use();
-	
+
+	//we specify the horizontal offset
+	glUniform3f(pos_uniform, 0.4f, 0.0f, 0.4f);
+
 	float timeValue = glfwGetTime();
 	float colorValues[4];
 	colorValues[0] = sin(timeValue) / 2.0f + 0.5f;
